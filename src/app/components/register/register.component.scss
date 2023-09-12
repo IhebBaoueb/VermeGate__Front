@@ -50,10 +50,11 @@ button{
 	margin: 10px auto;
 	justify-content: center;
 	display: block;
-	color: #fff;
-	background: #1c1c1d;
-	font-size: 1em;
-	font-weight: bold;
+    color: #3d3d41;
+    background-color: #ffffff;
+	font-size: 18px;
+	text-align:center;
+    font-weight: 600;
 	margin-top: 20px;
 	outline: none;
 	border: none;
@@ -61,7 +62,12 @@ button{
 	transition: .2s ease-in;
 	cursor: pointer;
 }
-
+form button{
+    
+    background-color: #ffffff;
+    color: #3d3d41;
+    
+}
 .imgDiv{
     width:100%;
     vertical-align: middle;
@@ -186,18 +192,6 @@ input{
 }
 ::placeholder{
     color: #e5e5e5;
-}
-form button{
-    width: 100%;
-    background-color: #ffffff;
-    color: #3d3d41;
-    padding: 15px 15px;
-    font-size: 18px;
-	text-align:center;
-    font-weight: 600;
-    border-radius: 5px;
-    cursor: pointer;
-
 }
 
 .social{
