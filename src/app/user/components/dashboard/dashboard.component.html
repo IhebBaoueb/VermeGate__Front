@@ -1,0 +1,45 @@
+
+<div style="min-height: 91vh; padding: 30px;" *ngIf="questions" >
+    <div>
+        <div class="container">
+            <ng-container *ngIf="questions.length === 0 " >
+                    
+                        
+                        <p>No questions found </p>
+                    
+            </ng-container>
+            
+            <div class="container" >
+                <div class="child" *ngFor ="let  question of questions">
+
+                <a class="card1" routerLink="/user/question/{{question.id}}">
+                  <h3>{{question.title}}</h3>
+                  <p class="small">{{question.body}}</p>
+                  <div class="tags-container">
+                    <p class="small">{{question.tags}}</p>
+                 </div>
+                 <h5>
+                    Posted By : <b>{{question.username}}</b> -
+                    Posted on : <b>{{question.createdDate | date : 'dd/MM/YYYY'}}</b>
+                </h5>
+                  <div class="go-corner" routerLink="/user/question/{{question.id}}">
+                    <div class="go-arrow">
+                      →
+                    </div>
+                  </div>
+                  
+                </a>
+                </div>
+            </div>
+
+            
+            <div class="pagination">
+                <mat-paginator [length]="total" [pageIndex]="pageNum" [pageSize]="5" 
+                (page)="pageIndexChange($event)"></mat-paginator>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+

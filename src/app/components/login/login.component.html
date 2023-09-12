@@ -1,0 +1,70 @@
+<!--
+    <div class="bg" style="background-color : #F8F8F8;">
+    <nz-spin [nzSpinning]="isSpinning" [nzSize]="'large'" nzTip="working ...">
+        <div class="parent">
+            <div class="child">
+                <div nz-row class="imgDiv">
+                    <div nz-col nzSpan="24">
+                        <label for="chk" aria-hidden="true">Login</label>
+                    </div>
+                </div>
+                <form  [formGroup]="validateForm" nz-form class="login-form">
+                    <nz-form-item>
+                        <nz-form-control  nzErrorTips="Please input your email !">
+                            <nz-input-group nzPrefixIcon="user" >
+                                <input type="text" nz-input placeholder="Email" formControlName="username"/>
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+                    <nz-form-item>
+                        <nz-form-control  nzErrorTip="Please input your password !">
+                            <nz-input-group nzPrefixIcon="lock">
+                                <input type="password" nz-input placeholder="Password" formControlName="password" />
+                            </nz-input-group>
+                        </nz-form-control>
+                    </nz-form-item>
+                  
+                    <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="login()">Log in </button>
+                        Or <a routerLink="/register">register now ! </a>
+                    
+
+                </form>
+            </div>
+        </div>
+    </nz-spin>
+
+</div>
+    
+-->
+<body>
+    
+    <form [formGroup]="validateForm" nz-form class="login-form">
+        <h3>Login </h3>
+
+        <label for="username">Email</label>
+        <nz-form-item>
+        <nz-form-control  nzErrorTips="Please input your email !">
+                <input type="text" nz-input placeholder="Email" formControlName="username"/>
+        </nz-form-control>
+        </nz-form-item>
+       
+
+        <label for="password">Password</label>
+        <nz-form-item>
+            <nz-form-control  nzErrorTip="Please input your password !">
+                    <input type="password" nz-input placeholder="Password" formControlName="password" />
+            </nz-form-control>
+        </nz-form-item>
+
+        <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'" (click)="login()">Log in </button>
+                Or <a routerLink="/register">register now ! </a>
+        
+    </form>
+
+
+
+
+
+
+</body>
+

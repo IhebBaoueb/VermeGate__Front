@@ -1,0 +1,128 @@
+
+<!--
+<mat-spinner [color]="'primary'" [diameter]="60" [strokeWidth]="6" *ngIf="isSubmitting"></mat-spinner>
+<div class="parent" *ngIf="!isSubmitting">
+    <div class="child">
+        <h2 class="question-caption"> Post Question </h2>
+        <h2></h2>
+
+        <form [formGroup]="validateForm" >
+            <div class="form-input">
+                <mat-form-field appearance="fill">
+                    <mat-label> Title </mat-label>
+                    <input matInput placeholder="Title" formControlName="title" />
+                    <mat-error 
+                    *ngIf="validateForm?.get('title')?.invalid && validateForm?.get('title')?.dirty || validateForm?.get('title')?.touched">
+                                Title is required !!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-input">
+                <mat-form-field appearance="fill">
+                    <mat-label>Body</mat-label>
+                    <textarea matInput row="6" placeholder="body" formControlName="body" ></textarea>
+                    <mat-error *ngIf="validateForm?.get('body')?.invalid && (validateForm?.get('title')?.dirty || validateForm?.get('body')?.touched)">
+                        Body is required !!
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="form-input">
+                <mat-form-field appearance="fill">
+                    <mat-label> Your Tags </mat-label>
+                    <input matInput placeholder="Tags" formControlName="tags" />
+                    <mat-error 
+                    *ngIf="validateForm?.get('tags')?.invalid && validateForm?.get('tags')?.dirty || validateForm?.get('tags')?.touched">
+                                Tags are required !!
+                    </mat-error>
+                    
+     
+
+                 </mat-form-field>
+            </div>
+
+            <button mat-raised-button color="primary" class="login-form-button  login-form-margin" type="submit" [disabled]="validateForm.invalid" (click)="postQuestion()" >Post Question </button>
+
+        </form>
+ 
+        
+
+    </div>
+</div>
+
+-->
+<mat-spinner [color]="'primary'" [diameter]="60" [strokeWidth]="6" *ngIf="isSubmitting"></mat-spinner>
+
+<div class="background" *ngIf="!isSubmitting">
+    <div class="container">
+      <div class="screen">
+        <div class="screen-header">
+          <div class="screen-header-left">
+            <div class="screen-header-button close"></div>
+            <div class="screen-header-button maximize"></div>
+            <div class="screen-header-button minimize"></div>
+            <div class="screen-header-button maximize"></div>
+
+          </div>
+          <div class="screen-header-right">
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+            <div class="screen-header-ellipsis"></div>
+          </div>
+        </div>
+        <div class="screen-body">
+          <div class="screen-body-item left">
+            <div class="app-title">
+              <span>Post Question </span>
+              <br>
+             
+            </div>
+            <div class="app-contact">VermeGate</div>
+          </div>
+
+        <form [formGroup]="validateForm" >
+          <div class="screen-body-item">
+            <div class="app-form">
+              <div class="app-form-group">
+                <mat-form-field appearance="fill">
+                <input  matInput placeholder="TITLE" formControlName="title" />
+                <mat-error 
+                *ngIf="validateForm?.get('title')?.invalid && validateForm?.get('title')?.dirty || validateForm?.get('title')?.touched">
+                            Title is required !!
+                </mat-error>
+                </mat-form-field>
+                
+              </div>
+              <div class="app-form-group">
+                <mat-form-field appearance="fill">
+                <textarea  matInput row="6" placeholder="BODY" formControlName="body" ></textarea>
+                <mat-error *ngIf="validateForm?.get('body')?.invalid && (validateForm?.get('title')?.dirty || validateForm?.get('body')?.touched)">
+                    Body is required !!
+                </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="app-form-group">
+                <mat-form-field appearance="fill">
+                <input   matInput placeholder="TAGS" formControlName="tags" />
+                    <mat-error 
+                    *ngIf="validateForm?.get('tags')?.invalid && validateForm?.get('tags')?.dirty || validateForm?.get('tags')?.touched">
+                                Tags are required !!
+                    </mat-error>
+                    </mat-form-field>
+              </div>
+              
+              <div class="app-form-group buttons">
+                <button class="app-form-button" routerLink="/user/dashboard">Return</button> ~
+                <button class="app-form-button"  type="submit" [disabled]="validateForm.invalid" (click)="postQuestion()">Post Question</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+  
