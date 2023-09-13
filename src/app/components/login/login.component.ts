@@ -50,7 +50,7 @@ export class LoginComponent  {
       this.validateForm.get(['password'])!.value,
       ).subscribe(
       response => {
-      this.router.navigateByUrl("user/dashboard");
+      this.router.navigateByUrl("user/informations");
       },
 
       error => {

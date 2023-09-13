@@ -5,12 +5,18 @@ import { UserGuard } from '../auth-guards/user-guard/user.guard';
 import {PostQuestionComponent} from './components/post-question/post-question.component';
 import { ViewQuestionComponent } from './components/view-question/view-question.component';
 import { InformationsComponent } from './components/informations/informations.component';
+import { ViewInformationITComponent } from './components/view-information-it/view-information-it.component';
+import { ViewInformationBusinessComponent } from './components/view-information-business/view-information-business.component';
 
 const routes: Routes = [
   {path:'dashboard', component:DashboardComponent, canActivate : [UserGuard]},
   {path:'question', component:PostQuestionComponent, canActivate : [UserGuard]},
   {path:'question/:questionId', component:ViewQuestionComponent, canActivate : [UserGuard]},
-  {path:'informations', component:InformationsComponent  }
+  {path:'informations', component:InformationsComponent  },
+  {path:'informations/IT',component:ViewInformationITComponent},
+  {path:'informations/Business',component:ViewInformationBusinessComponent}
+
+
 
 
 ];

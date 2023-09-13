@@ -17,7 +17,10 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { ViewQuestionComponent } from './components/view-question/view-question.component';
-import { InformationsComponent } from './components/informations/informations.component'
+import { InformationsComponent } from './components/informations/informations.component';
+import { ViewInformationITComponent } from './components/view-information-it/view-information-it.component';
+import { ViewInformationBusinessComponent } from './components/view-information-business/view-information-business.component'
+
 
 
 
@@ -27,7 +30,9 @@ import { InformationsComponent } from './components/informations/informations.co
     DashboardComponent,
     PostQuestionComponent,
     ViewQuestionComponent,
-    InformationsComponent
+    InformationsComponent,
+    ViewInformationITComponent,
+    ViewInformationBusinessComponent
   ],
   imports: [
     CommonModule,
