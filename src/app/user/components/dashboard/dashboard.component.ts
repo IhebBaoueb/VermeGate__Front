@@ -49,17 +49,7 @@ export class DashboardComponent implements OnInit {
     this.getAllQuestions();
   }
 
-  onSubmit() {
-    if (this.searchForm.valid) {
-      const questionId = this.searchForm.value.questionId;
   
-      // Appelez le service pour obtenir la question par ID.
-      this.questionService.getQuestionById(questionId).subscribe((response) => {
-        this.question = response; // Stockez la question dans une variable de votre composant.
-        // Faites ce que vous souhaitez avec la question, par exemple, affichez-la dans un autre emplacement de votre template.
-      });
-    }
-  }
   
   
   

@@ -5,6 +5,7 @@ import {MatChipsModule} from '@angular/material/chips';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LocalStorageService } from 'src/app/services/storage-service/local-storage.service';
 import { AnswerService } from '../../user-services/answer-services/answer.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -23,7 +24,9 @@ export class ViewQuestionComponent  {
     private questionService:QuestionService,
     private answerService : AnswerService ,
     private activatedRoute: ActivatedRoute,
-    private fb : FormBuilder
+    private fb : FormBuilder,
+    private snackBar : MatSnackBar
+
     ) { }
 
   ngOnInit() {
@@ -52,6 +55,8 @@ export class ViewQuestionComponent  {
     this.answerService.postAnswer(data).subscribe (
       (res) =>  {
         console.log(res);
+        this.snackBar.open("Answer posted successfully","close", {duration: 5000});
+
       }
     )
   }
