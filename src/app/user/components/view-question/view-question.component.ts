@@ -36,6 +36,7 @@ export class ViewQuestionComponent  {
     this.getQuestionById();
   }
 
+  
   getQuestionById() {
     this.questionService.getQuestionById(this.questionId).subscribe(
       (res) => {
@@ -58,6 +59,7 @@ export class ViewQuestionComponent  {
         this.snackBar.open("Answer posted successfully","close", {duration: 5000});
 
       }
+      
     )
   }
 

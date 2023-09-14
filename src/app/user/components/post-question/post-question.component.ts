@@ -41,7 +41,6 @@ export class PostQuestionComponent  {
 
       }else {
         this.snackBar.open("Something went wrong", "close", {duration: 5000});
-        
       }
     })
   } 
